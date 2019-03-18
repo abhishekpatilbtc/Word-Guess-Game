@@ -51,11 +51,11 @@ for (var i = 0; i < civilization.length; i++)
         }
         if (numGuessRemain === 0) {
         alert("Game Over");
-        location.reload()
+        location.reload();
         }
         if (answer.includes("_")===false) {
             alert("You Win");
-            location.reload()
+            location.reload();
         }
     }
     while (numGuessRemain < 0);

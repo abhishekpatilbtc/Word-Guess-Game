@@ -29,6 +29,7 @@ for (var i = 0; i < civilization.length; i++)
 {
     answer[i]= "_";
     currentWord.textContent = answer.join(" ");
+    numGuessRemainWord.textContent=numGuessRemain
 }
 
     document.onkeyup = function(event) {
@@ -38,7 +39,6 @@ for (var i = 0; i < civilization.length; i++)
         if (guess === civilization[j]) {
             answer[j] = guess;
             currentWord.textContent = answer.join(" ");
-            found = true;
         } 
     }
         if (guess !== civilization[j] && answer.includes(guess)===false) {
@@ -50,9 +50,12 @@ for (var i = 0; i < civilization.length; i++)
             numGuessRemainWord.textContent=numGuessRemain;
         }
         if (numGuessRemain === 0) {
-        alert("Game Over")
+        alert("Game Over");
         }
-        
+        if (answer.includes("_")===false) {
+            alert("You Win");
+            location.reload()
+        }
     }
     while (numGuessRemain < 0);
 

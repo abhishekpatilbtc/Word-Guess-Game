@@ -34,7 +34,7 @@ for (var i = 0; i < civilization.length; i++)
 
     document.onkeyup = function(event) {
     var guess = event.key;
-    do{
+    do {
     for (var j = 0; j < civilization.length; j++) {
         if (guess === civilization[j]) {
             answer[j] = guess;
